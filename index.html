@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropdown__toggle">Nav</button>
+        <div class="dropdown__drawer">
+            <ul class="menu">
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </div>
+    </div>
+    <p><a href="/read-more">Read more</a></p>
+
+<!-- JS code to display menu change property "display/opacity" -->
+    <!-- <script>
+        (function () {
+            let toggle = document.getElementsByClassName('dropdown__toggle')[0];
+            let dropdown = toggle.parentElement;
+
+            toggle.addEventListener('click', function (event) {
+                event.preventDefault();
+                dropdown.classList.toggle('is-open');
+            });
+        }());
+    </script> -->
+
+<!-- JS code to menu change property "height" -->
+    <script>
+        let toggle = document.getElementsByClassName('dropdown__toggle')[0],
+            dropdown = toggle.parentElement,
+            drawer = document.getElementsByClassName('dropdown__drawer')[0],
+            height = drawer.scrollHeight;
+
+            toggle.addEventListener('click', function(event) {
+                event.preventDefault();
+                dropdown.classList.toggle('is-open');
+
+                if (dropdown.classList.contains('is-open')) {
+                       drawer.style.height = height + 'px';
+                } else {
+                    drawer.style.height = 0;
+                }
+            });
+    </script>
+</body>
+</html>
