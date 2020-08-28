@@ -1,0 +1,87 @@
+body {
+    box-sizing: border-box;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.dropdown__toggle {
+    display: block;
+    padding: 0.5em 1em;
+    border: 1px solid hsl(280, 10%, 80%);
+    background-color: #fff;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+
+.dropdown__toggle:hover {
+    background-color: hsl(280, 15%, 95%);
+}
+
+/* Display menu change property "display" */
+/* .dropdown__drawer {
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 10em;
+} */
+
+/* .dropdown.is-open .dropdown__drawer {
+    display: block;
+} */
+
+/* Display menu change property "opacity" */
+/* .dropdown__drawer {
+    position: absolute;
+    background-color: #fff;
+    width: 10em;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .2s linear,
+                visibility 0s linear .2s;
+} */
+
+/* .dropdown.is-open .dropdown__drawer {
+    opacity: 1;
+    visibility: visible;
+    -moz-transition-delay: 0s;
+    transition-delay: 0s;
+} */
+/* Display menu change property "height" */
+.dropdown__drawer {
+    position: absolute;
+    background-color: #fff;
+    width: 10em;
+    height: 0;
+    overflow: hidden;
+    transition: height .3s ease-out;
+}
+
+.dropdown.is-open .dropdown__drawer {
+    height: auto;
+}
+
+.menu {
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu > li + li > a {
+    border-top: 0;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 0.5em 1em;
+    color: hsl(280, 40%, 60%);
+    background-color: #fff;
+    text-decoration: none;  
+    transition: all .2s linear;
+    border: 1px solid hsl(280, 10%, 80%);
+}
+
+.menu > li > a:hover {
+    background-color: hsl(280, 15%, 95%);
+    color: hsl(280, 25%, 10%);
+}
